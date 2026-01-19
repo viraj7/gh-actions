@@ -1,0 +1,14 @@
+name: wflow events
+
+on:
+    push:
+    pull_request:
+        types: [opened]
+    workflow_dispatch:
+
+jobs:
+    on-push:
+        runs-on: ubuntu-latest
+        steps:
+          - name: show the trigger
+            run: echo "Triggered by ${{ github.event_name }}"
