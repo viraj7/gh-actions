@@ -1,7 +1,6 @@
 name: wflow events
 
 on:
-    push:
     pull_request:
         types: [opened]
     workflow_dispatch:
