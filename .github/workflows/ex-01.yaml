@@ -1,0 +1,20 @@
+name: First exercise
+
+on: push
+
+jobs:
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+          - name: hello
+            run: echo "Hello"
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+          - name: failed step
+            run: |
+                echo "will fail"
+                exit 1
+          - name: last step
+            run:
+                echo "final step!"
